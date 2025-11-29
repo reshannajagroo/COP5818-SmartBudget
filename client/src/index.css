@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Colors */
+    --bg-color: #1f2b2e;
+    --text-color: #F7F4D5;
+    --text-muted: #c1f5d4;
+    --primary-color: #e5f0f8;
+    --secondary-color: #598469;
+    --accent-color: #3e7452;
+    --success-color: #22c55e;
+    --danger-color: #ef4444;
+
+    /* glassmorphism */
+    --glass-bg: #00a86a20;
+    --glass-border: #243335;
+    --glass-shadow: 0 8px 32px 0 #00000099;
+
+    /* spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* border */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    background-image:
+        radial-gradient(at 0% 0%, #22c55e0a 0px, #22c55e0a 50%),
+        radial-gradient(at 100% 0%, #22c55e26 0px, #22c55e26 50%);
+    background-attachment: fixed;
+}
+
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* Utilities */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--glass-shadow);
+    padding: var(--spacing-md);
+}
+
+.btn {
+    background: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--accent-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    border: 1px solid var(--accent-color);
+}
+
+input,
+select {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--glass-border);
+    color: var(--text-color);
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grid {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

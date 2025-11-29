@@ -1,0 +1,5 @@
+.transaction-form {
+    margin-top: var(--spacing-sm);
+    display: grid;
+    gap: var(--spacing-sm);
+}

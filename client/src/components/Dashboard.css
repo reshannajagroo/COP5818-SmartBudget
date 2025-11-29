@@ -1,0 +1,7 @@
+.income-text {
+    color: var(--success-color);
+}
+
+.expense-text {
+    color: var(--danger-color);
+}

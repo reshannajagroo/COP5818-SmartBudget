@@ -1,0 +1,27 @@
+.savings-goal-container {
+    margin-top: var(--spacing-sm);
+}
+
+.savings-goal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: var(--success-color);
+    height: 100%;
+}
+
+.savings-goal-form {
+    margin-top: var(--spacing-md);
+    display: grid;
+    gap: var(--spacing-sm);
+}
